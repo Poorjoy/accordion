@@ -21,3 +21,52 @@ header {
 section {
     padding: 50px 0;
 }
+
+.accordion__btn {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion__btn:hover {
+    background-color: #ccc;
+}
+
+.accordion__wrapper {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion__link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease;
+    margin: 10px 0;
+}
+
+.accordion__link:hover {
+    color: chocolate;
+}
+
+.accordion__btn:after {
+    content: '+';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "-";
+}
+
+
